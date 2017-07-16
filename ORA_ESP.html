@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>ESP8266 LED Control</title>
+		<link rel="stylesheet" href="ORA_ESP.css">
+	</head
+	<body>
+	
+	<!-- in the <button> tags below the ID attribute is the value sent to the arduino -->
+	<img src="https://pbs.twimg.com/profile_images/519964046607409152/rcwmKVMx.png" width="512" height="512" alt="ORA Scents">
+	
+
+<!--	<button id="g" class="led">Lights Green</button>  comment--changes data for pin 13 
+	<button id="b" class="led">Lights Blue</button> 
+	<button id="r" class="led">Lights Red</button> 
+	<button id="off" class="led">Lights Off</button> -->
+
+	
+	<button id="connect" class="signin">Connect Device to WiFi</button> 
+		
+	<script src="file:///C:/Users/Dylan%20Belvedere/Desktop/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".signin").click(function(){
+				//var p = $(this).attr('id'); // get id value (i.e. r, g, b, or off)
+				// send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+				$.get( "http://192.168.4.1/connect", function( data ) {
+                alert( "Data Loaded: " + data );
+                location.replace(data);
+                });;
+                
+                  
+			});
+		});
+	</script>
+	</body>
+</html>

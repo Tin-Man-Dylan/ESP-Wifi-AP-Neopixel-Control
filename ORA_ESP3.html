@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>ESP8266 LED Control</title>
+        <link rel="stylesheet" href="ORA_ESP.css">
+
+	</head>
+	<body>
+	
+	<!-- in the <button> tags below the ID attribute is the value sent to the arduino,--changes data for pin 13 -->
+	
+	<button id="g" class="led">Lights Green</button>   
+	<button id="b" class="led">Lights Blue</button> 
+	<button id="r" class="led">Lights Red</button> 
+	<button id="off" class="led">Lights Off</button>
+		
+	<script src="file:///C:/Users/Dylan%20Belvedere/Desktop/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".led").click(function(){
+				var p = $(this).attr('id'); // get id value (i.e. pin13, pin12, or pin11)
+				// send HTTP GET request to the IP address with the parameter "pin" and value "p", then execute the function
+				$.get("http://192.168.43.102/"+ p, {pin:p}); // execute get request
+			});
+		});
+	</script>
+	</body>
+</html>
