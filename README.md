@@ -4,9 +4,7 @@ The files in this repository should work for setting an ESP first into Access Po
 and password to the ESP and then flip it to be a clinet and connect your chosen network. Once connected you should be able to use another
 html page to control RGB Lights.
 
-I worked on this a couple years ago so can't remember exactly how it works at this time (but it did work), and haven't had the chance to test it, but I am just posting it in case it may be helpful to someone. If there are any issues chances are low that I will be able to solve them in the near future.
-
-Also note that this is really basic, and probably is not coded by any means in a very good way, but I was new to it at the time and just happy it worked.
+I worked on this a couple years ago(but it did work), and haven't had the chance to test it, but I am just posting it in case it may be helpful to someone. If there are any issues chances are low that I will be able to solve them in the near future.
 
 # Device
 I believe this was done on an ESP-12
